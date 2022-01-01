@@ -1,5 +1,5 @@
 import React from 'react';
-import "./css/Header.css";
+import "../css/Header.css";
 
 // Icons for the Header mid
 import SearchIcon from '@mui/icons-material/Search';
@@ -16,6 +16,8 @@ import AddIcon from '@mui/icons-material/Add';
 import ChatIcon from '@mui/icons-material/Chat';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+
+
 
 function Header() {
     return (
