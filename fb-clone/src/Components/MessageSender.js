@@ -14,9 +14,7 @@ function MessageSender() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-
         // Database stuff
-
         setInput("");
         setImageURL("");
     };
@@ -60,12 +58,8 @@ function MessageSender() {
                 <div className="messageSender_option">
                     <EmojiEmotionsIcon style={{ color: "orange" }} />
                     <h3>Feeling/activity</h3>
-                </div>
-              
-                
-               
-            </div>
-            
+                </div>           
+            </div>            
         </div>
     )
 }

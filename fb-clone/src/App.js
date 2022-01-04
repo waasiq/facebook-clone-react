@@ -1,26 +1,31 @@
 import React from 'react';
+
+import './css/App.css';
+
 import Header from './Components/Header.js';
 import Sidebar from './Components/Sidebar.js';
 import Feed from './Components/Feed.js';
-import './css/App.css';
+import Login from './Components/Login.js'
 
 // BEM Convention to follow 
 
 function App() {
+  const user = null;
   return (
-    <div className="App">
-
-        {/* Header */}
-        <Header />
-
-        {/* App Body */}
-        <div className="app_body">
-          <Sidebar />
-          <Feed />
-          {/* Feed */}
-          {/* Widgets */}
-        </div>
-
+    <div className ="App">
+        {!user ? (
+            <Login />
+        ) : 
+          (     
+            <>                  
+            <Header />
+            <div className="app_body">
+              <Sidebar />
+              <Feed />
+            </div>   
+            </>   
+          )
+        }
        
      
     </div>

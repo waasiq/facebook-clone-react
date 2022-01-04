@@ -31,9 +31,7 @@ function Header() {
                     <SearchIcon /> 
                     <input type="text" placeholder='Search Facebook'/>
                 </div>
-            </div> 
-
-         
+            </div>         
 
             <div className="header_center">
                 <div className="header_option header_option--active">
@@ -60,7 +58,7 @@ function Header() {
             <div className="header_right">
                 <div className="header_info">
                     <Avatar src="https://toppng.com/uploads/preview/roger-berry-avatar-placeholder-11562991561rbrfzlng6h.png"/>
-                    <h4>Waasiq Masood</h4>
+                    <h4>Waasiq</h4>
                 </div>
 
                 <IconButton>

@@ -1,0 +1,41 @@
+.login {
+    place-items: center;
+    height: 100vh;
+    display:flex;
+    color: #eff2f5;
+}
+
+.login_inner {
+    display:flex;
+    flex-direction: row;
+    margin-left:20%;
+}
+
+.login_left > img {
+    object-fit: contain;
+    height: 125px;
+}
+
+.login_left > h1 {
+    display: flex;
+    color: black;
+    font-weight: 490;
+    font-size: 28px;
+    margin-top:-4%;
+    padding-left: 38px;
+    width:60%;
+    
+}
+
+.login_right  { 
+    margin-left: -100px;
+    padding-top: 50px;
+}
+
+.login_right > button{ 
+    width: 300px;
+    
+}
+
+
+/* Complete this  */
