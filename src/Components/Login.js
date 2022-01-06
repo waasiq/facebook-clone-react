@@ -3,9 +3,9 @@ import { Button } from '@mui/material'
 import '../css/Login.css'
 
 //!Import from other components 
-import {auth, provider , signInWithPopup} from './Firebase.js';
-import { useStateValue } from './StateProvider.js';
-import { actionTypes } from './reducer.js';
+import {auth, provider , signInWithPopup} from '../Firebase.js';
+import { useStateValue } from '../Context/StateProvider.js';
+import { actionTypes } from '../Context/reducer.js';
 
 function Login() {
     const [state, dispatch ] = useStateValue();
@@ -18,9 +18,6 @@ function Login() {
                     type: actionTypes.SET_USER,
                     user:result.user
                 })
-
-                const user = result.user;
-                console.log(user);
                 // redux action? --> dispatch({ type: SET_USER, user });
             })
             .catch((error) => {

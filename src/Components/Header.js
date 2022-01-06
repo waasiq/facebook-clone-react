@@ -1,7 +1,7 @@
 import React from 'react';
 import "../css/Header.css";
 
-// Icons for the Header mid
+//! Icons for the Header mid
 import SearchIcon from '@mui/icons-material/Search';
 import HomeIcon from '@mui/icons-material/Home';
 import FlagIcon from '@mui/icons-material/Flag';
@@ -9,7 +9,7 @@ import SubscriptionsIcon from '@mui/icons-material/Subscriptions';
 import StoreIcon from '@mui/icons-material/Store';
 import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
 
-// Icons for header right
+//! Icons for header right
 import { Avatar } from "@mui/material"
 import { IconButton } from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
@@ -17,9 +17,14 @@ import ChatIcon from '@mui/icons-material/Chat';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
+//! Import from other State Values
+import { useStateValue } from '../Context/StateProvider';
+
 
 
 function Header() {
+
+    const [{user}, dispatch] = useStateValue();
     return (
         <div className='header'>
             <div className="header_left">
@@ -57,8 +62,8 @@ function Header() {
                 
             <div className="header_right">
                 <div className="header_info">
-                    <Avatar src="https://toppng.com/uploads/preview/roger-berry-avatar-placeholder-11562991561rbrfzlng6h.png"/>
-                    <h4>Waasiq</h4>
+                    <Avatar src={user.photoURL}/>
+                    <h4>{user.displayName}</h4>
                 </div>
 
                 <IconButton>

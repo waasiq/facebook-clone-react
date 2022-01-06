@@ -8,9 +8,14 @@ import PhotoLibraryIcon from '@mui/icons-material/PhotoLibrary';
 import EmojiEmotionsIcon from '@mui/icons-material/EmojiEmotions';
 
 
+import { useStateValue } from '../Context/StateProvider';
+
+
 function MessageSender() {
     const [input, setInput] = useState('');
     const [imageURL, setImageURL] = useState('');
+
+    const [{user}, dispatch] = useStateValue();
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -22,14 +27,14 @@ function MessageSender() {
     return (
         <div className='messageSender'>
             <div className="messageSender_top">
-                <Avatar />
+                <Avatar src={user.photoURL} />
                 <form action="">
                     <input 
                         value = { input }
                         onChange = {(e) =>  setInput(e.target.value) }
                         className = 'messageSender_input'
                         type="text"
-                        placeholder={'Whats on your mind'}
+                        placeholder={`Whats on your mind , ${user.displayName}?`}
                     />
 
                     <input 

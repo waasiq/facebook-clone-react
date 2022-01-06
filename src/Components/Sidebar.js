@@ -8,10 +8,18 @@ import GroupsIcon from '@mui/icons-material/Groups';
 import StoreIcon from '@mui/icons-material/Store';
 import VideoLibraryIcon from '@mui/icons-material/VideoLibrary';
 
+import { useStateValue } from '../Context/StateProvider';
+
 function Sidebar() {
+    const [{user}, dispatch] = useStateValue();
+
     return (
         <div className='sidebar'>
-            <SidebarRow title='Waasiq Masood' src='https://toppng.com/uploads/preview/roger-berry-avatar-placeholder-11562991561rbrfzlng6h.png'/>
+            <SidebarRow 
+                title={user.displayName} 
+                src={user.photoURL}
+            />
+            
             <SidebarRow 
                 title= 'Friends'
                 Icon ={GroupIcon} 

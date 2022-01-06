@@ -7,10 +7,12 @@ import Sidebar from './Components/Sidebar.js';
 import Feed from './Components/Feed.js';
 import Login from './Components/Login.js'
 
+import { useStateValue } from './Context/StateProvider';
+
 // BEM Convention to follow 
 
 function App() {
-  const user = null;
+  const [{user}, dispatch] = useStateValue();
   return (
     <div className ="App">
         {!user ? (
