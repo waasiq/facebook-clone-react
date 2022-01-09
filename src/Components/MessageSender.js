@@ -10,6 +10,11 @@ import EmojiEmotionsIcon from '@mui/icons-material/EmojiEmotions';
 
 import { useStateValue } from '../Context/StateProvider';
 
+//! Firebase functions
+import db from "../Firebase.js";
+import { collection , addDoc ,serverTimestamp  } from "firebase/firestore";
+import { FirebaseError } from 'firebase/app';
+
 
 function MessageSender() {
     const [input, setInput] = useState('');
@@ -19,6 +24,15 @@ function MessageSender() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+
+        addDoc(collection(db,'posts'), {
+            message:input,
+            profilePic: user.photoURL,
+            time: serverTimestamp(),
+            username: user.displayName,
+            image: imageURL
+        });
+
         // Database stuff
         setInput("");
         setImageURL("");

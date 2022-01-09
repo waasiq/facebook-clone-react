@@ -5,7 +5,8 @@ import './css/App.css';
 import Header from './Components/Header.js';
 import Sidebar from './Components/Sidebar.js';
 import Feed from './Components/Feed.js';
-import Login from './Components/Login.js'
+import Login from './Components/Login.js';
+import Widgets from './Components/Widget/Widget.js';
 
 import { useStateValue } from './Context/StateProvider';
 
@@ -24,6 +25,7 @@ function App() {
             <div className="app_body">
               <Sidebar />
               <Feed />
+              <Widgets />
             </div>   
             </>   
           )
