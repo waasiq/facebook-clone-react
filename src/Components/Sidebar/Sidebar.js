@@ -1,5 +1,5 @@
 import React from 'react';
-import '../css/Sidebar.css';
+import './Sidebar.css';
 import SidebarRow from './SidebarRow';
 
 // ICONS For Sidebar
@@ -8,7 +8,7 @@ import GroupsIcon from '@mui/icons-material/Groups';
 import StoreIcon from '@mui/icons-material/Store';
 import VideoLibraryIcon from '@mui/icons-material/VideoLibrary';
 
-import { useStateValue } from '../Context/StateProvider';
+import { useStateValue } from '../../Context/StateProvider';
 
 function Sidebar() {
     const [{user}, dispatch] = useStateValue();

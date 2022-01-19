@@ -1,5 +1,5 @@
 import React , { useState } from 'react'
-import '../css/MessageSender.css';
+import './MessageSender.css';
 
 // Material UI Icons
 import { Avatar } from '@mui/material';
@@ -8,13 +8,14 @@ import PhotoLibraryIcon from '@mui/icons-material/PhotoLibrary';
 import EmojiEmotionsIcon from '@mui/icons-material/EmojiEmotions';
 
 
-import { useStateValue } from '../Context/StateProvider';
+import { useStateValue } from '../../Context/StateProvider';
 
 //! Firebase functions
-import db from "../Firebase.js";
+import db from "../../Firebase.js";
 import { collection , addDoc ,serverTimestamp  } from "firebase/firestore";
-import { FirebaseError } from 'firebase/app';
 
+//! SELECT FILES
+import selectFiles from 'select-files';
 
 function MessageSender() {
     const [input, setInput] = useState('');
@@ -36,6 +37,11 @@ function MessageSender() {
         // Database stuff
         setInput("");
         setImageURL("");
+    };
+
+    const imageFileSelect = (e) => {
+        e.preventDefault();
+        console.log()
     };
 
     return (
@@ -71,7 +77,15 @@ function MessageSender() {
 
                 <div className="messageSender_option">
                     <PhotoLibraryIcon style={{ color: "green" }} />
+                    
                     <h3>Photo/video</h3>
+                    {/* <selectFiles /> */}
+                    {/* <input 
+                        class="input-file" 
+                        type="file" 
+                        accept="image/png, image/jpeg"
+                        onChange = { imageFileSelect }
+                    /> */}
                 </div>
 
                 <div className="messageSender_option">

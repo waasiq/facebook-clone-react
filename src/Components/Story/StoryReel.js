@@ -1,5 +1,5 @@
 import React from 'react'
-import '../css/StoryReel.css';
+import './StoryReel.css';
 
 import Story from './Story';
 

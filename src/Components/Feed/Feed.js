@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 
 //Component Import
-import StoryReel from './StoryReel.js';
+import StoryReel from '../Story/StoryReel.js';
 import MessageSender from './MessageSender.js';
 import Post from './Post.js';
 
-import '../css/Feed.css';
+import './Feed.css';
 
 //! Get data from documents
-import db from "../Firebase.js";
+import db from "../../Firebase.js";
 import { collection , orderBy , onSnapshot, query } from "firebase/firestore";
 
 function Feed() {

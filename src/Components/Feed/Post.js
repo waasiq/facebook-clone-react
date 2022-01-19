@@ -1,5 +1,5 @@
 import React from 'react';
-import '../css/Post.css';
+import './Post.css';
 
 // Material UI Icons
 import { Avatar } from '@mui/material';
@@ -28,7 +28,8 @@ function Post( {profilePic, image, username, timestamp, message }) {
                 </div>
 
                 <div className="post_image">
-                    <img src={image} alt="" />
+                    {!image ? (<></>) : (<><img src={image} alt="" /></> ) }
+                    
                 </div>
 
                 <div className="post_options">

@@ -1,5 +1,5 @@
 import React from 'react';
-import "../css/Header.css";
+import "./Header.css";
 
 //! Icons for the Header mid
 import SearchIcon from '@mui/icons-material/Search';
@@ -18,7 +18,7 @@ import NotificationsIcon from '@mui/icons-material/Notifications';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 //! Import from other State Values
-import { useStateValue } from '../Context/StateProvider';
+import { useStateValue } from '../../Context/StateProvider';
 
 
 

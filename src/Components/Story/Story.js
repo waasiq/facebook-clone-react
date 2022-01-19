@@ -1,5 +1,5 @@
 import React from 'react'
-import '../css/Story.css';
+import './Story.css';
 
 import {Avatar} from '@mui/material'
 
