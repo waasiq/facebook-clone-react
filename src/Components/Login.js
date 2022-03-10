@@ -12,8 +12,7 @@ function Login() {
 
     const signIn = () => {
         signInWithPopup(auth, provider)
-            .then((result) => {
-                
+            .then((result) => {                
                 dispatch({
                     type: actionTypes.SET_USER,
                     user:result.user
@@ -21,14 +20,10 @@ function Login() {
                 // redux action? --> dispatch({ type: SET_USER, user });
             })
             .catch((error) => {
-                // Handle Errors here.
                 const errorCode = error.code;
                 const errorMessage = error.message;
-                // The email of the user's account used.
                 const email = error.email;
-                // The AuthCredential type that was used.
-               
-                // ...
+                // If required console log this
             });
     };
 

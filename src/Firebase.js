@@ -7,14 +7,13 @@ import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { getFirestore } from 'firebase/firestore';
 
 const firebaseConfig = {
-    apiKey: "AIzaSyBRktCezBHu_QSOdHau5GDbO-ZuRETV38k",
-    authDomain: "facebook-clone-8ccfc.firebaseapp.com",
-    projectId: "facebook-clone-8ccfc",
-    storageBucket: "facebook-clone-8ccfc.appspot.com",
-    messagingSenderId: "724313421698",
-    appId: "1:724313421698:web:8ccee766d742f2b10f819b",
-    measurementId: "G-JGVHFJGEZ2"
-  };
+  apiKey: "AIzaSyBVtscZ68ZDr2oLWTilImfM6FVSTTxaz18",
+  authDomain: "fb-clone-3529f.firebaseapp.com",
+  projectId: "fb-clone-3529f",
+  storageBucket: "fb-clone-3529f.appspot.com",
+  messagingSenderId: "524823270085",
+  appId: "1:524823270085:web:5a2c1ad7b271a5bf1a56ac"
+};
 
   const app = initializeApp(firebaseConfig);
   const db = getFirestore(app);

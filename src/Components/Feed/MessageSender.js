@@ -14,8 +14,6 @@ import { useStateValue } from '../../Context/StateProvider';
 import db from "../../Firebase.js";
 import { collection , addDoc ,serverTimestamp  } from "firebase/firestore";
 
-//! SELECT FILES
-import selectFiles from 'select-files';
 
 function MessageSender() {
     const [input, setInput] = useState('');
@@ -38,12 +36,7 @@ function MessageSender() {
         setInput("");
         setImageURL("");
     };
-
-    const imageFileSelect = (e) => {
-        e.preventDefault();
-        console.log()
-    };
-
+    
     return (
         <div className='messageSender'>
             <div className="messageSender_top">
@@ -79,13 +72,6 @@ function MessageSender() {
                     <PhotoLibraryIcon style={{ color: "green" }} />
                     
                     <h3>Photo/video</h3>
-                    {/* <selectFiles /> */}
-                    {/* <input 
-                        class="input-file" 
-                        type="file" 
-                        accept="image/png, image/jpeg"
-                        onChange = { imageFileSelect }
-                    /> */}
                 </div>
 
                 <div className="messageSender_option">

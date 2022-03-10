@@ -10,7 +10,7 @@ import StoreIcon from '@mui/icons-material/Store';
 import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
 
 //! Icons for header right
-import { Avatar } from "@mui/material"
+import { Avatar } from "@mui/material";
 import { IconButton } from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
 import ChatIcon from '@mui/icons-material/Chat';
